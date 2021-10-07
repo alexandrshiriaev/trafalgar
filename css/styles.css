@@ -60,10 +60,6 @@
 }
 
 .header {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
   padding: 56px 0;
 }
 .header .container {
@@ -72,6 +68,7 @@
   align-items: center;
 }
 .header .container .burger {
+  z-index: 3;
   display: none;
   cursor: pointer;
   position: relative;
@@ -665,12 +662,11 @@
   }
   .header .container .burger.active {
     position: relative;
-    z-index: 2;
     background: url("../assets/navbar/burger-active.svg") center no-repeat;
   }
   .header .container .navbar {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     transform: translateX(-200%);
     top: 0;
